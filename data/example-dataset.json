@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "name": "example-dataset",
+    "version": "1.0.0",
+    "description": "Contoh dataset untuk RAG bot WhatsApp",
+    "createdAt": "2026-05-10"
+  },
+  "documents": [
+    {
+      "source": "setup-guide",
+      "text": "Panduan Setup Bot WhatsApp:\n\n1. Install Node.js v16 atau lebih tinggi\n2. Clone repository atau extract file project\n3. Jalankan 'npm install' untuk install dependencies\n4. Buat file .env dengan GROQ_API_KEY\n5. Jalankan 'npm start' untuk memulai bot\n6. Scan QR code dengan WhatsApp untuk connect\n7. Bot siap menerima pesan masuk"
+    },
+    {
+      "source": "knowledge-base",
+      "text": "Knowledge Base Management:\n\nUntuk menambah FAQ:\n1. Buka dashboard di http://localhost:3001\n2. Masuk ke tab 'Knowledge Base'\n3. Isi keyword (lowercase) dan response\n4. Klik 'Save Keyword'\n5. Keyword langsung tersimpan di knowledge.json\n6. Bot akan menggunakan FAQ jika ada exact match"
+    },
+    {
+      "source": "rag-features",
+      "text": "Fitur RAG (Retrieval-Augmented Generation):\n\n1. Semantic Search: Bot mencari konteks relevan dari dokumen\n2. Document Chunking: Dokumen dipotong jadi piece kecil untuk akurasi\n3. TF-IDF Scoring: Relevance dihitung dengan algoritma TF-IDF\n4. Context Building: Hasil retrieval diubah jadi prompt untuk AI\n5. Source Attribution: Bot menyebutkan sumber jawaban dari dokumen\n6. Multi-Dataset Support: Bot bisa menggunakan multiple datasets sekaligus"
+    }
+  ],
+  "faq": [
+    {
+      "question": "bagaimana cara start bot?",
+      "answer": "Jalankan 'npm start' di terminal. Bot akan generate QR code yang perlu di-scan dengan WhatsApp."
+    },
+    {
+      "question": "dimana menyimpan dataset?",
+      "answer": "Simpan file JSON di folder 'data/' dengan struktur: {metadata, documents, faq}. Bot otomatis load saat startup."
+    },
+    {
+      "question": "berapa banyak dataset bisa ditambah?",
+      "answer": "Tidak ada batasan. Bot bisa mengelola multiple datasets dan menggunakan semuanya untuk RAG sekaligus."
+    }
+  ]
+}
